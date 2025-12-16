@@ -1,0 +1,7 @@
+{
+  "name": "NeuroVision AI",
+  "description": "A clinical-grade, camera-based neuro and ophthalmic rehabilitation platform featuring AI-driven assessment, training, and progress monitoring.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
