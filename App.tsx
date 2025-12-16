@@ -23,7 +23,8 @@ const DEFAULT_PATIENT: PatientDetails = {
     age: '',
     gender: 'Male',
     condition: '',
-    doctorName: 'Ruthwik Goparaju'
+    doctorName: 'Ruthwik Goparaju',
+    dateOfBirth: ''
 };
 
 function App() {
@@ -67,7 +68,8 @@ function App() {
               age: 'N/A',
               gender: 'N/A',
               condition: 'Simulation Mode',
-              doctorName: tempPatientForm.doctorName || 'Ruthwik Goparaju'
+              doctorName: tempPatientForm.doctorName || 'Ruthwik Goparaju',
+              dateOfBirth: 'N/A'
           });
       } else {
           // In Real mode, use the form data
@@ -77,7 +79,8 @@ function App() {
               age: tempPatientForm.age || 'N/A',
               gender: tempPatientForm.gender || 'Not Specified',
               condition: tempPatientForm.condition || 'General Assessment',
-              doctorName: tempPatientForm.doctorName || 'Ruthwik Goparaju'
+              doctorName: tempPatientForm.doctorName || 'Ruthwik Goparaju',
+              dateOfBirth: tempPatientForm.dateOfBirth || ''
           });
       }
 
@@ -360,6 +363,15 @@ function App() {
                                   placeholder="e.g. 45"
                                   value={tempPatientForm.age}
                                   onChange={e => setTempPatientForm({...tempPatientForm, age: e.target.value})}
+                               />
+                            </div>
+                            <div>
+                               <label className="block text-xs font-bold text-slate-500 uppercase mb-1">Date of Birth</label>
+                               <input 
+                                  type="date" 
+                                  className="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-medical-500"
+                                  value={tempPatientForm.dateOfBirth}
+                                  onChange={e => setTempPatientForm({...tempPatientForm, dateOfBirth: e.target.value})}
                                />
                             </div>
                             <div className="col-span-2">

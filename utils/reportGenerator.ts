@@ -1,5 +1,4 @@
 
-
 import { DailyProgress, PatientDetails, SessionAnalysis } from '../types';
 
 export const generatePDFReport = (
@@ -350,7 +349,7 @@ export const generatePDFReport = (
            </div>
            <div class="field-group">
               <div class="field-label">Date of Birth</div>
-              <div class="field-value">--/--/----</div>
+              <div class="field-value">${patient.dateOfBirth || '--/--/----'}</div>
            </div>
            
            <div class="full-width">
@@ -515,7 +514,7 @@ export const generatePDFReport = (
                    <img src="${signatureSrc}" alt="Digital Signature" />
                 </div>
                 <div class="sig-name">${doctorName}</div>
-                <div class="sig-title">Biomedical Engineer<br>Lead Architect, NeuroVision AI</div>
+                <div class="sig-title">Biomedical Engineer<br>Founder & CEO, NeuroVision AI</div>
             </div>
             <div class="signature-box" style="border:none; text-align:right; font-size:10px; color:#64748b; vertical-align:bottom;">
                 <p><strong>ELECTRONICALLY VERIFIED</strong><br>
@@ -652,4 +651,3 @@ export const generatePDFReport = (
   printWindow.document.write(htmlContent);
   printWindow.document.close();
 };
-

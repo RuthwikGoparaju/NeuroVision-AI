@@ -73,6 +73,7 @@ export interface PatientDetails {
   gender: string;
   condition: string;
   doctorName?: string;
+  dateOfBirth?: string;
 }
 
 export interface SessionAnalysis {
